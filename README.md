@@ -1,16 +1,58 @@
-## Hi there 👋
 
-<!--
-**farisssalma933-prog/farisssalma933-prog** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>css cat art</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="cat-face">
+				<div class="ears">
+					<div class="ear ear1"></div>
+					<div class="ear ear2"></div>
+				</div>
+				<div class="eyes">
+					<div class="eye eye1"></div>
+					<div class="eye eye2"></div>
+				</div>
+				<div class="lips">
+					<div class="lip lip1"></div>
+					<div class="lip lip2"></div>
+				</div>
+				<div class="nose"></div>
+				<div class="blushes">
+					<div class="blush blush1"></div>
+					<div class="blush blush2"></div>
+				</div>
+				<div class="mustache-group mustache-group1">
+					<div class="mustache mustache1"></div>
+					<div class="mustache mustache2"></div>
+					<div class="mustache mustache3"></div>
+				</div>
+				<div class="mustache-group mustache-group2">
+					<div class="mustache mustache4"></div>
+					<div class="mustache mustache5"></div>
+					<div class="mustache mustache6"></div>
+				</div>
+			</div>
+			<div class="cat-body">
+				<div class="hands">
+					<div class="hand left-hand">
+						<span class="hand-plam"></span>
+					</div>
+					<div class="hand right-hand">
+						<span class="hand-plam"></span>
+					</div>
+				</div>
+			</div>
+			<div class="legs">
+				<div class="leg left-leg"></div>
+				<div class="leg right-leg"></div>
+			</div>
+		</div>
+	</body>
+</html>
