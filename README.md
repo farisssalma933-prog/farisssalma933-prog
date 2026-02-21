@@ -1,58 +1,323 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--primary: #f3f2fc;
+	--ghostbg: #2a003f;
+	--body: #ffeaeb;
+	--shade: #ffc3c3b3;
+	--dark: #340000;
+	--heart: #ff0000;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>css cat art</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="cat-face">
-				<div class="ears">
-					<div class="ear ear1"></div>
-					<div class="ear ear2"></div>
-				</div>
-				<div class="eyes">
-					<div class="eye eye1"></div>
-					<div class="eye eye2"></div>
-				</div>
-				<div class="lips">
-					<div class="lip lip1"></div>
-					<div class="lip lip2"></div>
-				</div>
-				<div class="nose"></div>
-				<div class="blushes">
-					<div class="blush blush1"></div>
-					<div class="blush blush2"></div>
-				</div>
-				<div class="mustache-group mustache-group1">
-					<div class="mustache mustache1"></div>
-					<div class="mustache mustache2"></div>
-					<div class="mustache mustache3"></div>
-				</div>
-				<div class="mustache-group mustache-group2">
-					<div class="mustache mustache4"></div>
-					<div class="mustache mustache5"></div>
-					<div class="mustache mustache6"></div>
-				</div>
-			</div>
-			<div class="cat-body">
-				<div class="hands">
-					<div class="hand left-hand">
-						<span class="hand-plam"></span>
-					</div>
-					<div class="hand right-hand">
-						<span class="hand-plam"></span>
-					</div>
-				</div>
-			</div>
-			<div class="legs">
-				<div class="leg left-leg"></div>
-				<div class="leg right-leg"></div>
-			</div>
-		</div>
-	</body>
-</html>
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(37, 0, 45);
+}
+
+.container {
+	width: 750px;
+	height: 750px;
+	border-radius: 90%;
+
+	background-color: var(--ghostbg);
+	box-shadow: 0px 0px 95px var(--shade);
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cat-face {
+	width: 400px;
+	height: 300px;
+	position: relative;
+
+	background-color: var(--body);
+	border-radius: 200px 200px 100px 100px;
+}
+
+.ears {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+
+.ear {
+	width: 100px;
+	height: 200px;
+
+	background-color: var(--body);
+	position: absolute;
+	top: -30px;
+}
+
+.ear1 {
+	right: 55px;
+	border-radius: 200px 300px 0 0;
+	transform: rotate(45deg);
+}
+
+.ear2 {
+	left: 55px;
+	border-radius: 300px 200px 0 0;
+	transform: rotate(-45deg);
+}
+
+.ear:before {
+	content: "";
+	background-color: var(--shade);
+
+	width: 25px;
+	height: 25px;
+	position: absolute;
+
+	border-radius: 100px;
+	box-shadow: 0px 0px 75px var(--shade);
+}
+
+.ear1:before {
+	right: 40px;
+	top: 40px;
+}
+
+.ear2:before {
+	left: 40px;
+	top: 40px;
+}
+
+.eyes,
+.blushes {
+	display: flex;
+	justify-content: space-around;
+}
+
+.eye {
+	width: 75px;
+	height: 75px;
+	background-color: var(--dark);
+
+	position: relative;
+	top: 100px;
+
+	border-radius: 100px;
+}
+
+.eye:before {
+	content: "";
+	position: absolute;
+
+	height: 35px;
+	width: 35px;
+
+	background-color: var(--primary);
+
+	border-radius: 100px;
+}
+
+.eye:after {
+	content: "";
+	position: absolute;
+
+	height: 15px;
+	width: 15px;
+
+	background-color: var(--primary);
+
+	border-radius: 100px;
+}
+
+.eye1:before {
+	top: 10px;
+	right: 15px;
+}
+.eye1:after {
+	bottom: 15px;
+	left: 25px;
+}
+
+.eye2:before {
+	top: 10px;
+	left: 15px;
+}
+.eye2:after {
+	bottom: 15px;
+	right: 25px;
+}
+
+.nose {
+	width: 25px;
+	height: 15px;
+
+	background-color: var(--dark);
+	position: absolute;
+	top: 150px;
+	left: 190px;
+
+	border-radius: 80px 80px 150px 150px;
+}
+
+.lips {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 120px;
+}
+
+.lip {
+	width: 35px;
+	height: 15px;
+
+	border: 5px solid var(--dark);
+	border-top: none;
+	border-radius: 0 0 150px 150px;
+}
+
+.lip1 {
+	transform: translateX(6px) rotate(-20deg);
+}
+.lip2 {
+	transform: translateX(-6px) rotate(20deg);
+}
+
+.blush {
+	width: 35px;
+	height: 35px;
+	background-color: var(--shade);
+
+	position: relative;
+	top: 100px;
+
+	border-radius: 100px;
+}
+
+.blush1 {
+	right: 50px;
+}
+.blush2 {
+	left: 50px;
+}
+
+.mustache {
+	width: 50px;
+	height: 5px;
+	margin: 5px;
+	position: absolute;
+
+	border-radius: 50px;
+
+	background-color: var(--dark);
+	border: 1px solid var(--body);
+}
+
+/* right mustache */
+.mustache1 {
+	bottom: 80px;
+	right: -30px;
+	transform: rotate(5deg);
+}
+
+.mustache2 {
+	bottom: 50px;
+	right: -30px;
+	transform: rotate(15deg);
+}
+
+.mustache3 {
+	bottom: 25px;
+	right: -10px;
+	transform: rotate(45deg);
+}
+/* right mustache */
+
+/* left mustache */
+.mustache4 {
+	bottom: 80px;
+	left: -30px;
+	transform: rotate(5deg);
+}
+
+.mustache5 {
+	bottom: 50px;
+	left: -30px;
+	transform: rotate(-15deg);
+}
+
+.mustache6 {
+	bottom: 25px;
+	left: -10px;
+	transform: rotate(-45deg);
+}
+/* left mustache */
+
+.cat-body {
+	width: 300px;
+	height: 200px;
+
+	background-color: var(--body);
+	margin-top: -30px;
+
+	border-radius: 200px 200px 150px 150px;
+}
+
+.hands,
+.legs {
+	display: flex;
+	justify-content: space-around;
+}
+
+.hand {
+	width: 50px;
+	height: 50px;
+
+	position: relative;
+	top: 70px;
+
+	border: 5px solid var(--dark);
+	border-top: none;
+	border-radius: 0 0 150px 150px;
+}
+
+.right-hand {
+	transform: rotate(35deg);
+}
+.left-hand {
+	transform: rotate(-35deg);
+}
+
+.hand-plam {
+	background-color: var(--dark);
+	width: 100%;
+	height: 25px;
+
+	position: absolute;
+	bottom: -2px;
+
+	border-radius: 0 0 150px 150px;
+}
+
+.leg {
+	width: 80px;
+	height: 80px;
+
+	position: relative;
+	margin-top: -20px;
+
+	background-color: var(--body);
+	border-top: none;
+	border-radius: 0 0 150px 150px;
+}
+
+.left-leg {
+	margin-right: 20px;
+}
+.right-leg {
+	margin-left: 20px;
+}
